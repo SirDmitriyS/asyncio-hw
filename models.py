@@ -8,11 +8,11 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 load_dotenv()
 
-PG_PASSWORD = os.getenv("POSTGRES_PASSWORD", "password")
-PG_USER = os.getenv("POSTGRES_USER", "swapi")
-PG_DB = os.getenv("POSTGRES_DB", "swapi")
-PG_HOST = os.getenv("POSTGRES_HOST", "localhost")
-PG_PORT = os.getenv("POSTGRES_PORT", "5432")
+PG_PASSWORD = os.getenv("PG_PASSWORD", "password")
+PG_USER = os.getenv("PG_USER", "swapi")
+PG_DB = os.getenv("PG_DB", "swapi")
+PG_HOST = os.getenv("PG_HOST", "localhost")
+PG_PORT = os.getenv("PG_PORT", "5432")
 
 PG_DSN = f"postgresql+asyncpg://{PG_USER}:{PG_PASSWORD}@{PG_HOST}:{PG_PORT}/{PG_DB}"
 
